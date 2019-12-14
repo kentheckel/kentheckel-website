@@ -1,0 +1,299 @@
+#icons {
+    display:grid;
+    grid-template-columns: 50px 1fr 70px 10px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+
+    height: 100%; 
+    width: 100%;
+
+}
+
+#about{
+
+    text-align: center;
+    grid-column: 2/3;
+    grid-row:  2/3;
+    height: 135px;
+    width: 135px;
+}
+
+#notes{
+
+    text-align: center;
+    grid-column: 9/10;
+    grid-row:  4/5;
+    height: 130px;
+    width: 130px;
+}
+
+#puzzle{
+
+    text-align: center;
+    grid-column: 5/6;
+    grid-row:  4/5;
+    height: 115px;
+    width: 115px;
+    margin-left: 10px;
+}
+
+#press{
+
+    text-align: center;
+    grid-column: 2/3;
+    grid-row:  4/5;
+    height: 130px;
+    width: 130px;
+}
+
+#videos{
+
+    text-align: center;
+    grid-column: 2/3;
+    grid-row:  6/7;
+    height: 130px;
+    width: 130px;
+}
+
+#contact{
+
+    text-align: center;
+    grid-column: 2/3;
+    grid-row:  8/9;
+    height: 130px;
+    width: 130px;
+}
+
+#social{
+
+    text-align: center;
+    grid-column: 5/6;
+    grid-row:  2/3;
+    height: 130px;
+    width: 130px;
+}
+
+#start{
+    grid-column: 1/4;
+    grid-row:  11/11;
+    z-index: 1;
+}
+
+#startButton{
+    text-align:center;
+    height: 54px;
+    width: 250px;
+    background-color: #60A75C;
+    border: 3px solid #568E51;
+    border-radius: 15px;
+    margin: 3px;
+}
+
+centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   
+
+
+button{
+    color: white;
+    font-size: 50;
+    font-family: 'VT323', monospace;
+
+}    
+
+body,html{
+    height:100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin:0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+
+}
+
+#toolbar{
+    grid-column: 1/11;
+    grid-row:  11/12;
+    background-color: #377EF0;
+    border: 3px solid #2F68BA;
+
+
+}
+
+#tab{
+    grid-column: 5/6;
+    grid-row:  11/12;
+    z-index: 10;
+
+}
+
+#tabButton{
+    background-color: #376AB5;
+    border: 3px solid #25497C;
+    border-radius: 15px;
+    text-align: center;
+    height: 54px;
+    width: 250px;
+    margin: 3px;
+
+}
+
+#dottedLineThing{
+    grid-column: 1/4;
+    grid-row:  11/11;
+    z-index: 10;
+    position: relative;
+    border: 4px dashed #383F3E;
+    height: 46px;
+    width: 0px;
+    left: 275px;
+    margin-top: 3px;
+
+}
+
+#dottedLineThing2{
+    grid-column: 1/4;
+    grid-row:  11/11;
+    z-index: 10;
+    position: relative;
+    border: 4px dashed #383F3E;
+    height: 46px;
+    width: 0px;
+    left: 283px;
+    margin-top: 8px;
+
+}
+
+label {
+    font-size: 30px;
+}
+
+/* The Modal (background) */
+.modal {
+    position: fixed;
+    float: left;
+    left: 25%;
+    top: 5%;
+    z-index: 1;
+    vertical-align: middle;
+    margin: auto;
+    width: 700px;
+    height: 540px;
+    background-image: url(images/About_Modal.svg);
+    background-size: 700px 540px;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+/*    margin: 3% auto; */
+    padding: 0px;
+    border: 0px;
+}
+
+.modal_notes {
+    width: 608px;
+    height: 816px;
+    background-image: url(images/Notes_Modal.png);
+    background-size: 608px 816px;
+    position: fixed;
+}
+
+.modal_puzzle {
+    width: 508px;
+    height: 616px;
+    background-image: url(images/Notes_Modal.png);
+    background-size: 508px 616px;
+    position: fixed;
+}
+
+.modal_press {
+    width: 1118px;
+    height: 646px;
+    background-image: url(images/Puzzle_Modal.png);
+    background-size: 1118px 646px;
+    position: fixed;
+}
+
+.modal_contact {
+    width: 1186px;
+    height: 568px;
+    background-image: url(images/Contact_Modal.png);
+    background-size: 1186px 568px;
+    position: fixed;
+}
+.modal_social {
+    width: 323px;
+    height: 646px;
+    background-image: url(images/Social_Modal.png);
+    background-size: 323px 646px;
+    position: fixed;
+}
+
+.close {
+    float: right;
+    height: 52px;
+    width: 55px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+}
+
+#mydivheader {
+  padding: 40px;
+  cursor: move;
+  z-index: 10;
+}
+
+.about-text{
+    padding: 20px;
+    border: 1px #ccc;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+    margin-top: 92px;
+    overflow: scroll;
+    height: 395px;
+}
+
+.social-content{
+    padding: 36px;
+    margin-top: 280px;
+    font-size: 25px;
+    text-align: left;
+
+}
+
+.puzzle-content{
+    padding: 36px;
+    margin-top: 280px;
+    font-size: 25px;
+    text-align: left;
+
+}
+
+.press-content{
+    padding: 36px;
+    margin-top: 220px;
+    margin-left: 370px;
+    font-size: 25px;
+    text-align: left;
+
+}
+
+.contact-content{
+    padding: 36px;
+    margin-top: 278px;
+    margin-left:720px;
+    font-size: 26px;
+    text-align: left;
+
+}
