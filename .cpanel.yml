@@ -6,4 +6,10 @@ deployment:
     - /bin/cp modal.js $DEPLOYPATH
     - /bin/cp Style.css $DEPLOYPATH
     - /bin/cp favicon.ico $DEPLOYPATH
+    - /bin/cp editing.css $DEPLOYPATH
+    - /bin/cp editing.html $DEPLOYPATH
+    - /bin/cp nomadpuzzle.css $DEPLOYPATH
+    - /bin/cp RefrigeratorStep2.html $DEPLOYPATH
+    - /bin/cp ToothpasteStep3.html $DEPLOYPATH
+    - /bin/cp ValentinesStep1.html $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
