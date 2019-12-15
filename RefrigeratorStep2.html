@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="imagepuzzle.css" >
+
+</head>
+<body >
+	<div style="text-align: center; font-family: 'Montserrat'" >
+		<h1>Welcome to the second step of the Valentines Creator Puzzle</h1>
+		<h2>You will need to move the images to reveal the link to the next puzzle</h2>
+	</div>
+
+	<div style="height: 600px; width: 800px; iborder-width: 1px; border-color: #000; border-style: solid; overflow: hidden; margin: auto;">
+			<img id="beckiImg" src="images/beckiandchris2.jpg">
+			<img id="colinImg" src="images/colinandsamir2.jpg">
+			<img id="codyImg" src="images/codywanner2.jpg" style="margin-left: 538px;">
+			<img id="leviImg" src="images/levi2.jpg" style="margin-top: 388px;">
+		<div id="link" style="margin-left: 540px; z-index: 1; position: fixed;">
+			<a href="https://www.kentheckel.com/ToothpasteStep3.html">hey :)</a>
+		</div>
+	</div>
+	<br>
+	<div style="text-align: -webkit-center;" >
+		<div> 
+			<label class="switch">
+				<input id="switch1" type="checkbox" onclick="slideBecki()">
+				<span class="slider"></span>
+			</label>
+		</div>
+		<br>
+		<div>
+			<label class="switch">
+				<input id="switch2" type="checkbox" onclick="slideColin()">
+				<span class="slider"></span>
+			</label>
+		</div>
+		<br>
+		<div>
+			<label class="switch">
+				<input id="switch3" type="checkbox" onclick="slideCody()">
+				<span class="slider"></span>
+			</label>
+		</div>
+		<br>
+		<div>
+			<label class="switch">
+				<input id="switch4" type="checkbox" onclick="slideLevi()">
+				<span class="slider"></span>
+			</label>
+		</div>
+	</div>
+	
+
+
+	<script>
+		var switch1 = document.getElementById('switch1');
+		var switch2 = document.getElementById('switch2');
+		var switch3 = document.getElementById('switch3');
+		var switch4 = document.getElementById('switch4');
+		var beckiImg = document.getElementById("beckiImg");
+		var colinImg = document.getElementById("colinImg");
+		var codyImg = document.getElementById("codyImg");
+		var leviImg = document.getElementById("leviImg");
+
+
+
+		function slideBecki() {
+			checkSwitches();
+			beckiImg.style.zIndex = "120";
+			colinImg.style.zIndex = "10";
+			codyImg.style.zIndex = "10";
+			leviImg.style.zIndex = "10";
+
+
+			console.log('switch1 value', switch1.checked);
+			if (switch1.checked) {
+				beckiImg.style.marginLeft = "388px";
+			} else {
+				beckiImg.style.marginLeft = "0px" ;
+			}
+		}
+
+		function slideColin() {			
+			checkSwitches();
+			beckiImg.style.zIndex = "10";
+			colinImg.style.zIndex = "120";
+			codyImg.style.zIndex = "10";
+			leviImg.style.zIndex = "10";
+			
+			console.log('switch2 value', switch2.checked);
+			if (switch2.checked) {
+				colinImg.style.marginTop = "350px";
+			} else {
+				colinImg.style.marginTop = "0px" ;
+			}
+		}
+
+		function slideCody() {			
+			checkSwitches();
+			beckiImg.style.zIndex = "10";
+			colinImg.style.zIndex = "10";
+			codyImg.style.zIndex = "120";
+			leviImg.style.zIndex = "10";
+			
+			console.log('switch3 value', switch3.checked);
+			if (switch3.checked) {
+				codyImg.style.marginLeft = "0px";
+			} else {
+				codyImg.style.marginLeft = "538px" ;
+				
+			}
+		}
+
+		function slideLevi() {			
+			checkSwitches();
+			beckiImg.style.zIndex = "10";
+			colinImg.style.zIndex = "10";
+			codyImg.style.zIndex = "10";
+			leviImg.style.zIndex = "120";
+
+			console.log('switch4 value', switch4.checked);
+			if (switch4.checked) {
+				leviImg.style.marginTop = "0px";
+			} else {
+				leviImg.style.marginTop = "388px" ;
+			}
+		}
+
+		function checkSwitches(){
+			if (switch1.checked === false && switch2.checked === true && switch3.checked === true && switch4.checked === false){
+				console.log("zindex 100");
+				link.style.zIndex = "100";
+			}
+			else {
+				link.style.zIndex = "1";
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="numpadpuzzle.css" >
+	
+</head>
+<body style="text-align: center; font-family: 'Montserrat'">
+	<div >
+		<h1>Welcome to the third and Final step of the Valentines Creator Puzzle</h1>
+		<h2>You will need to find the correct 4 digit code to light up the images to find prize and finish the Puzzle.</h2>
+	</div>
+	<br>
+
+	<img id="cameronImg" src="images/cameron.jpg" height="200px;" style="filter: grayscale(100%);">
+	<img id="calumImg" src="images/calum.jpg" height="200px;" style="filter: grayscale(100%);">
+	<img id="audreyImg" src="images/audrey.jpg" height="200px;" style="filter: grayscale(100%);">
+	<img id="millenialImg" src="images/themillenial.jpg" height="200px;" style="filter: grayscale(100%);">
+	<br>
+	<br>
+	<br>
+	
+		
+		<input id="textArea" type="text">
+	
+	<br>
+	<br>
+	<br>
+	<p id="message"></p>
+
+	<div id="mainGrid" style="height: 600px; width: 400px; margin: auto;">
+		<div class="mainGrid">
+			<button type="button" onclick="button1()" class="gridItems">1</button>
+			<button type="button" onclick="button2()" class="gridItems">2</button>
+			<button type="button" onclick="button3()" class="gridItems">3</button>
+			<button type="button" onclick="button4()" class="gridItems">4</button>
+			<button type="button" onclick="button5()" class="gridItems">5</button>
+			<button type="button" onclick="button6()" class="gridItems">6</button>
+			<button type="button" onclick="button7()" class="gridItems">7</button>
+			<button type="button" onclick="button8()" class="gridItems">8</button>
+			<button type="button" onclick="button9()" class="gridItems">9</button>
+			<button type="button" onclick="button10()" class="gridItems">X</button>
+			<button type="button" onclick="button11()" class="gridItems">0</button>
+			<button type="button" onclick="checkPassword()" class="gridItems" style="padding:0px">Enter</button>
+			
+		</div>
+		
+	</div>
+
+	<script>
+
+		var cameronImg = document.getElementById("cameronImg");
+		var calumImg = document.getElementById("calumImg");
+		var audreyImg = document.getElementById("audreyImg");
+		var millenialImg = document.getElementById("millenialImg");
+
+
+		function button1() {
+		  document.getElementById("textArea").value += "1";
+		}
+		function button2() {
+		  document.getElementById("textArea").value += "2";
+		}
+		function button3() {
+		  document.getElementById("textArea").value += "3";
+		}
+		function button4() {
+		  document.getElementById("textArea").value += "4";
+		}
+		function button5() {
+		  document.getElementById("textArea").value += "5";
+		}
+		function button6() {
+		  document.getElementById("textArea").value += "6";
+		}
+		function button7() {
+		  document.getElementById("textArea").value += "7";
+		}
+		function button8() {
+		  document.getElementById("textArea").value += "8";
+		}
+		function button9() {
+		  document.getElementById("textArea").value += "9";
+		}
+		function button10() {
+		  document.getElementById("textArea").value = "";
+		}
+		function button11() {
+		  document.getElementById("textArea").value += "0";
+		}
+
+		var cameronCorrect = false;
+		var calumCorrect = false;
+		var audreyCorrect = false;
+		var millenialCorrect = false;
+
+
+		function checkPassword(){
+			
+			var textArea = document.getElementById("textArea").value;
+			if (textArea === "1234") {
+				cameronImg.style.filter = "grayscale(0%)";
+				cameronCorrect = true;
+			}
+			else if (textArea === "2015") {
+				calumImg.style.filter = "grayscale(0%)";
+				calumCorrect = true;
+			}
+			else if (textArea === "1500") {
+				audreyImg.style.filter = "grayscale(0%)";
+				audreyCorrect = true;
+			}
+			else if (textArea === "2018") {
+				millenialImg.style.filter = "grayscale(0%)";
+				millenialCorrect = true;
+			}
+
+			if (cameronCorrect === true && calumCorrect === true && audreyCorrect === true && millenialCorrect === true){
+				cameronImg.style.filter = "hue-rotate(90deg)";
+				calumImg.style.filter = "hue-rotate(90deg)";
+				audreyImg.style.filter = "hue-rotate(90deg)";
+				millenialImg.style.filter = "hue-rotate(90deg)";
+				mainGrid.style.display = "none";
+				message = "Congrats, you solved it! Shoot me an email at kentwillbeyourvalentine@gmail.com and I'll let you know if you are one of the 10 winners!";
+				document.getElementById("message").innerHTML = message;
+
+			}
+
+			document.getElementById("textArea").value = "";
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<style>
+	div {
+		width: 720px;
+		height: 480px;
+		border: 1px solid black;
+		margin: auto;
+		color: white;
+		background-image: url('images/MKBHD2.jpg');
+	}
+</style>
+</head>
+<body style="text-align: center; font-family: 'Montserrat'">
+
+	<h1>Welcome to the first step of the Valentines Creator Puzzle</h1>
+	<h2>You will need to find the word hidden in the Valentine of the corresponding creator</h2>
+
+	<div id="myDiv" ></div>
+	<br>
+	<form>
+		<input type="text" id="textBox" style="font-size:16pt">
+	</form><br>
+	<button type="button" onclick="myBackground()">Enter</button><br/><br/>
+	<label id="message"></label><a id="step2Link"></a>
+
+	<script>
+		var textBox = document.getElementById("textBox");
+		var step = 1;
+		
+
+		function myBackground() {
+
+			switch(step){
+
+				case 1: 
+				if (textBox.value.toUpperCase() === 'EDIT') {
+
+					document.getElementById("myDiv").style.backgroundImage = "url('images/Peter2.jpg')";
+					textBox.value = null;
+					message.value = null;
+					step++;
+				}
+				else{
+					message = "You made an oopsie, try again.";
+					document.getElementById("message").innerHTML = message;
+				}
+				break;
+
+				case 2: 
+				if (textBox.value.toUpperCase() === 'CANON') {
+					document.getElementById("myDiv").style.backgroundImage = "url('images/cody2.jpg')";
+					textBox.value = null;
+					message.value = null;
+					step++;
+				}
+				else{
+					message = "You made an oopsie, try again.";
+					document.getElementById("message").innerHTML = message;
+				}
+				break;
+
+				case 3: 
+				if (textBox.value.toUpperCase() === 'TMG') {
+					document.getElementById("myDiv").style.backgroundImage = "url('images/casey2.jpg')";
+					textBox.value = null;
+					message.value = null;
+					step++;
+				}
+				else{
+					message = "You made an oopsie, try again.";
+					document.getElementById("message").innerHTML = message;
+				}
+				break;
+
+				case 4: 
+				if (textBox.value.toUpperCase() === 'FORTNITE') {
+					document.getElementById("myDiv").style.backgroundImage = "url('images/casey3.jpg')";
+					textBox.value = null;
+					message = "You Did it! "
+					document.getElementById("message").innerHTML = message;
+					document.getElementById("step2Link").innerHTML = "Step 2";
+					document.getElementById("step2Link").href = "https://www.kentheckel.com/RefrigeratorStep2.html";
+					
+				}
+				else{
+					message = "You made an oopsie, try again.";
+					document.getElementById("message").innerHTML = message;
+				}
+				break;
+			}	
+		}
+		document.onkeypress = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+           //alert('No F-12');
+           return false;
+       }
+   }
+   document.onmousedown = function (event) {
+   	event = (event || window.event);
+   	if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+    	event = (event || window.event);
+    	if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+
+    <!-- 
+//Disable right click script 
+//visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+var message="Sorry, right-click has been disabled"; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+	(document.layers||(document.getElementById&&!document.all)) { 
+		if (e.which==2||e.which==3) {(message);return false;}}} 
+		if (document.layers) 
+			{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+		else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+		document.oncontextmenu=new Function("return false") 
+// --> 
+</script>
+
+</body>
+</html>
