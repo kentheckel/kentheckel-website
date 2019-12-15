@@ -2,4 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kentheck/public_html/
-    - /bin/cp -R site $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp modal.js $DEPLOYPATH
+    - /bin/cp Style.css $DEPLOYPATH
+    - /bin/cp favicon.ico $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
